@@ -4,7 +4,10 @@ let Bro = {
     avatar:,
     mood:,
     favorite_sounds:[],
+    favorite bpm range:,
     phrases:,
     MBTI:,
 }
+
+
 
