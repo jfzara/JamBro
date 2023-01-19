@@ -48,7 +48,7 @@ const Ramos = new Bro('2', 'Ramos', 'red', 'avatarRamos', 'fiesta', ['bright sou
 //moods can be store in some object maybe and called  randomly when needed
 
 const bros = [
-
+    Darko, Ramos
 ];
 
 app.get('/', (req, res) => {
@@ -57,7 +57,7 @@ app.get('/', (req, res) => {
 app.listen(3000, () => console.log(`Listening on ${port}`));
 
 app.get('/api/bros', (req, res) => {
-    res.send([1, 2, 3]);
+    res.send(bros);
 })
 
 app.get('/api/bros/:id', (req, res) => {
@@ -71,6 +71,9 @@ app.get('/api/bros/:id', (req, res) => {
 
 
 const port = process.env.PORT || 3000;
+
+
+console.log(Darko.name);
 
 
 
