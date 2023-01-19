@@ -17,14 +17,14 @@ function Bro(id, name, color, avatar, mood, favorite_sounds, favorite_bpms, favo
 
 
 
-const Darko = new Bro('1', 'Darko', 'black', 'avatarDarko', 'dark', ['low frequency sound', 'dark sound',
+const Darko = new Bro(1, 'Darko', 'black', 'avatarDarko', 'dark', ['low frequency sound', 'dark sound',
     'darker sound', 'low pad sound',
     'moody pad sound', 'soft and dark sound',
     'low frequency percussions', 'menacing pad sounds',
     'sinister synth sound'], [81, 100, 113, 85, 102, 76], ['ballad', 'gothic', 'cold wave'], ['This needs some more mystery', 'Even darker', 'Darker', 'Something sinister']);
 
 
-const Ramos = new Bro('2', 'Ramos', 'red', 'avatarRamos', 'fiesta', ['bright sound', 'horn stab',
+const Ramos = new Bro(2, 'Ramos', 'red', 'avatarRamos', 'fiesta', ['bright sound', 'horn stab',
     'exotic percussion sound', 'triangle sound',
     'brass sound', 'bright lead', 'vocal stab sound'], [120, 124, 123, 126], ['salsa', 'samba', 'afrobeat', 'ska', 'tropical house'],
     ['Caramba!',
@@ -51,9 +51,7 @@ const bros = [
     Darko, Ramos
 ];
 
-app.get('/', (req, res) => {
-    res.send('HelloWorld!');
-});
+
 app.listen(3000, () => console.log(`Listening on ${port}`));
 
 app.get('/api/bros', (req, res) => {
@@ -61,11 +59,14 @@ app.get('/api/bros', (req, res) => {
 })
 
 app.get('/api/bros/:id', (req, res) => {
-    const bro = bros.find(br => br.id === parseInt(req.params.id));
-    if (!bro) {
-        res.status(404).send("We don't know that bro!");
-        res.send(bro);
+    const someBro = bros.find(bro => bro.id === parseInt(req.params.id));
+    
+    if (!someBro) {
+        res.status(404).send("Sorry, couldn't find the bro!");
+        
     }
+    res.send(someBro.name);
+    console.log(someBro.favorite_sounds);
 });//on met /:id pour chaque parametre, on peut mettre plusieurs parametres /:id/:foo/:bar etc
 
 
