@@ -2,16 +2,21 @@
 const url = "http://localhost:3000/api/bros";
 const queryString = window.location.search;
 
-const urlParams = new URLSearchParams(queryString);
 
+const urlParams = new URLSearchParams(queryString);
+const productId = urlParams.get('id');
 
 async function displayBro() {
 
-    await fetch(url + "/1")
+    await fetch(url)
         .then((res) => res.json())
         .then(function (data) {
             console.log(data);
-        });
+            for(let i= 0; i< data.length; i++){
+            console.log(data[i].name);
+            } 
+        } );
+         
 
 };
 
