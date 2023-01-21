@@ -1,28 +1,23 @@
+
 const url = "http://localhost:3000/api/bros";
 const queryString = window.location.search;
-console.log(queryString);
+
 const urlParams = new URLSearchParams(queryString);
 
 
-
- 
-const randomBroId =
-
 async function displayBro() {
 
-    await fetch (url + broId)
-
-    .then((resource) => resource.json())
-
-    .then(function (broArr) {
-        console.log(broArr);  
-    })
-
+    await fetch(url + "/1")
+        .then((res) => res.json())
+        .then(function (data) {
+            console.log(data);
+        });
 
 };
 
-const changeMood = document.querySelector("change_mood")
+let changeMood = document.getElementById("changemood");
 changeMood.addEventListener("click", displayBro);
+
 
 
 /*

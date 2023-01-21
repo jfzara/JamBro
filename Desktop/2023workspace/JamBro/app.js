@@ -3,6 +3,7 @@
 const express = require('express');
 const app = express();
 
+
 function Bro(id, name, color, avatar, mood, favorite_sounds, favorite_bpms, favorite_genres, phrases) {
     this.id = id;
     this.name = name;
@@ -42,7 +43,21 @@ avatars are the Url s of each image or each image should be made with CSS stylin
 //moods can be store in some object maybe and called  randomly when needed       
  */
 
-
+app.use((req, res, next) => {
+    // origine, droit d'accéder = tt le monde '*'
+    res.setHeader("Access-Control-Allow-Origin", "*");
+    // headers, ce sont les headers acceptés (en-tête)
+    res.setHeader(
+      "Access-Control-Allow-Headers",
+      "Origin, X-Requested-With, Content, Accept, Content-Type, Authorization"
+    );
+    // methods,  ce sont les méthodes acceptés (verbe de requete)
+    res.setHeader(
+      "Access-Control-Allow-Methods",
+      "GET, POST, PUT, DELETE, OPTIONS, PATCH"
+    );
+    next();
+  });
 
 
 app.listen(3000, () => console.log(`Listening on ${port}`));
@@ -63,6 +78,27 @@ app.get('/api/bros/:id', (req, res) => {
 });//on met /:id pour chaque parametre, on peut mettre plusieurs parametres /:id/:foo/:bar etc
 
 const port = process.env.PORT || 3000;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
