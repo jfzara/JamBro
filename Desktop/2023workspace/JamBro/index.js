@@ -6,22 +6,46 @@ const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
 const productId = urlParams.get('id');
 
-async function displayBro() {
+const speechBubble = document.querySelector(".speech_bubble");
+
+async function changeBroProgram() {
 
     await fetch(url)
         .then((res) => res.json())
-        .then(function (data) {
-            console.log(data);
-            for(let i= 0; i< data.length; i++){
-            console.log(data[i].name);
-            } 
-        } );
-         
+        .then(function (bros) {
+            const random = Math.floor(Math.random() * bros.length);
+            let bro = bros[random];
+            console.log(bro);
+
+        });
+
+
 
 };
 
+async function sameBroProgram() {
+
+    await fetch(url)
+        .then((res) => res.json())
+        .then(function (bros) {
+            const randomBro = Math.floor(Math.random() * bros.length);
+            let bro = bros[randomBro];
+            console.log(bro);
+            const randomPhraseIndex = Math.floor(Math.random() * bro.phrases.length);
+            let phrase = bro.phrases[randomPhraseIndex]
+
+            speechBubble.innerHTML = `${phrase}`;
+        });
+
+
+
+};
+
+let sameMood = document.getElementById("samemood");
+sameMood.addEventListener("click", sameBroProgram);
+
 let changeMood = document.getElementById("changemood");
-changeMood.addEventListener("click", displayBro);
+changeMood.addEventListener("click", changeBroProgram);
 
 
 
@@ -31,23 +55,23 @@ changeMood.addEventListener("click", displayBro);
         //traduire la promesse 1 en json
         .then((response) => response.json())
 
-        /*les données (data) récupérées dans la promesse 2 servent à afficher chaque propriété du produit
+        /*les données (bros) récupérées dans la promesse 2 servent à afficher chaque propriété du produit
         "imageUrl" + "altTxt", "name", "price", "description", "colors".
       
 
-        .then(function (data) {
-            console.log(data)
+        .then(function (bros) {
+            console.log(bros)
 
             // Affichage de la balise "image" 
             let img = document.createElement('img');
-            img.src = data.imageUrl;
-            img.alt = data.altTxt;
+            img.src = bros.imageUrl;
+            img.alt = bros.altTxt;
             document.getElementsByClassName('item__img')[0].appendChild(img);
 
 
             // Affichage de la balise "title" 
             let namebro = document.getElementById('title');
-            namebro.innerHTML = data.name;
+            namebro.innerHTML = bros.name;
 
            
         }
