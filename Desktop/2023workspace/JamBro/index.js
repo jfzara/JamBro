@@ -33,16 +33,19 @@ async function sameBroProgram() {
             let broArr = bros.filter(b => b.id === bro.id);
 
             for (let p = 0; p <= broArr.length; p++) {
-                const randomPhraseIndex = Math.floor(Math.random() * broArr[0].phrases.length);
-                let selectedBro = broArr[0]
-                let phrase = selectedBro.phrases[randomPhraseIndex]
-                speechBubble.innerHTML = `${phrase}`;
+                setInterval(
+                    function () {
+                    const randomPhraseIndex = Math.floor(Math.random() * broArr[0].phrases.length);
+                    let selectedBro = broArr[0]
+                    let phrase = selectedBro.phrases[randomPhraseIndex]
+                    speechBubble.innerHTML = `${phrase}`;
+                }, 5000);
             }
-             
-  
-}
 
-);
+
+        }
+
+        );
 
 
 
