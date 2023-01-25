@@ -30,16 +30,20 @@ async function sameBroProgram() {
         .then(function (bros) {
             const randomBroIndex = Math.floor(Math.random() * bros.length);
             let bro = bros[randomBroIndex];
+            let broNameDisplay = document.querySelector(".bro_name");
+            broNameDisplay.innerHTML = `${bro.name}`;
+
             let broArr = bros.filter(b => b.id === bro.id);
 
             for (let p = 0; p <= broArr.length; p++) {
                 setInterval(
                     function () {
-                    const randomPhraseIndex = Math.floor(Math.random() * broArr[0].phrases.length);
-                    let selectedBro = broArr[0]
-                    let phrase = selectedBro.phrases[randomPhraseIndex]
-                    speechBubble.innerHTML = `${phrase}`;
-                }, 5000);
+                        const randomPhraseIndex = Math.floor(Math.random() * broArr[0].phrases.length);
+                        let selectedBro = broArr[0]
+                        let phrase = selectedBro.phrases[randomPhraseIndex]
+                        speechBubble.innerHTML = `${phrase}`;
+
+                    }, 5000);
             }
 
 
