@@ -42,6 +42,7 @@ async function sameBroProgram() {
                         let selectedBro = broArr[0]
                         let phrase = selectedBro.phrases[randomPhraseIndex]
                         speechBubble.innerHTML = `${phrase}`;
+                        speechBubble.style.fontSize = "1.5rem";
 
                     }, 5000);
             }
