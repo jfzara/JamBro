@@ -1,5 +1,5 @@
 
-const url = "http://localhost:3000/api/bros";
+const url = "http://localhost:3000/api/pals";
 const queryString = window.location.search;
 
 
@@ -8,14 +8,14 @@ const productId = urlParams.get('id');
 
 const speechBubble = document.querySelector(".speech_bubble");
 
-async function changeBroProgram() {
+async function changepalProgram() {
 
     await fetch(url)
         .then((res) => res.json())
-        .then(function (bros) {
-            const random = Math.floor(Math.random() * bros.length);
-            let bro = bros[random];
-            console.log(bro);
+        .then(function (pals) {
+            const random = Math.floor(Math.random() * pals.length);
+            let pal = pals[random];
+            console.log(pal);
 
         });
 
@@ -23,24 +23,24 @@ async function changeBroProgram() {
 
 };
 
-async function sameBroProgram() {
-    let selectedBro = [];
+async function samepalProgram() {
+    let selectedpal = [];
     await fetch(url)
         .then((res) => res.json())
-        .then(function (bros) {
-            const randomBroIndex = Math.floor(Math.random() * bros.length);
-            let bro = bros[randomBroIndex];
-            let broNameDisplay = document.querySelector(".bro_name");
-            broNameDisplay.innerHTML = `${bro.name}`;
+        .then(function (pals) {
+            const randompalIndex = Math.floor(Math.random() * pals.length);
+            let pal = pals[randompalIndex];
+            let palNameDisplay = document.querySelector(".pal_name");
+            palNameDisplay.innerHTML = `${pal.name}`;
 
-            let broArr = bros.filter(b => b.id === bro.id);
+            let palArr = pals.filter(b => b.id === pal.id);
 
-            for (let p = 0; p <= broArr.length; p++) {
+            for (let p = 0; p <= palArr.length; p++) {
                 setInterval(
                     function () {
-                        const randomPhraseIndex = Math.floor(Math.random() * broArr[0].phrases.length);
-                        let selectedBro = broArr[0]
-                        let phrase = selectedBro.phrases[randomPhraseIndex]
+                        const randomPhraseIndex = Math.floor(Math.random() * palArr[0].phrases.length);
+                        let selectedpal = palArr[0]
+                        let phrase = selectedpal.phrases[randomPhraseIndex]
                         speechBubble.innerHTML = `${phrase}`;
                         speechBubble.style.fontSize = "1.5rem";
 
@@ -57,7 +57,7 @@ async function sameBroProgram() {
 };
 
 let sameMood = document.getElementById("samemood");
-sameMood.addEventListener("click", sameBroProgram);
+sameMood.addEventListener("click", samepalProgram);
 
 let changeMood = document.getElementById("changemood");
-changeMood.addEventListener("click", changeBroProgram);
+changeMood.addEventListener("click", changepalProgram);

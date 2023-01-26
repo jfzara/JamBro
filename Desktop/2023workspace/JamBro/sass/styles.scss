@@ -1,0 +1,97 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.box {
+    border: none;
+
+}
+
+.container {
+    height: 100vh;
+    border: 3px rgb(156, 179, 151) solid;
+}
+
+.btn_container {
+    display: flex;
+    justify-content: center;
+    height: 30%;
+}
+
+.btn {
+    position: relative;
+    left: 36%;
+    height: 286px;
+    width: 315px;
+    font-size: 3rem;
+}
+
+.btn:hover {
+    cursor: pointer;
+    background-color: beige;
+}
+
+.collab {
+    display: none;
+    height: 0%;
+    width: 0%;
+}
+
+.pal_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 39%;
+}
+
+
+
+.avatar {
+    position: relative;
+    right: 417px;
+    font-size: 5rem;
+    color: rgb(0, 0, 0);
+    border: 3px red solid;
+}
+
+
+
+.speech_bubble {
+    position: absolute;
+    background: #00aabb;
+    border-radius: 0.4em;
+    width: auto;
+    top: 38px;
+    right: 336px;
+}
+
+.speech_bubble:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border: 20px solid transparent;
+    border-top-color: #00aabb;
+    border-bottom: 0;
+    border-left: 0;
+    margin-left: -10px;
+    margin-bottom: -20px;
+}
+
+.pal_name {
+    position: relative;
+    left: -37%;
+    text-align: center;
+    font-size: 3rem;
+}
+
+.bubble_container {
+    height: 81%;
+    width: 100%;
+    border: 1px solid;
+}
