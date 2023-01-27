@@ -33,7 +33,14 @@ async function samepalProgram() {
             let palNameDisplay = document.querySelector(".pal_name");
             palNameDisplay.innerHTML = `${pal.name}`;
 
-            let palArr = pals.filter(b => b.id === pal.id);
+            let palPhoto = document.querySelector(".palPhoto");
+            palPhoto.style.height= "200px";
+            palPhoto.style.width= "200px";
+            
+            palPhoto.src = `${pal.avatar}`;
+            
+
+            let palArr = pals.filter(p => p.id === pal.id);
 
             for (let p = 0; p <= palArr.length; p++) {
                 setInterval(
@@ -59,5 +66,4 @@ async function samepalProgram() {
 let sameMood = document.getElementById("samemood");
 sameMood.addEventListener("click", samepalProgram);
 
-let changeMood = document.getElementById("changemood");
-changeMood.addEventListener("click", changepalProgram);
+

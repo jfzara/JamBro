@@ -85,6 +85,11 @@
   font-size: 3rem;
 }
 
+.palPhoto {
+  object-fit: cover;
+  object-position: center center;
+}
+
 .bubble_container {
   height: 81%;
   width: 100%;
