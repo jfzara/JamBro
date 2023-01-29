@@ -6,7 +6,7 @@ const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
 const productId = urlParams.get('id');
 
-const speechBubble = document.querySelector(".speech_bubble");
+
 
 async function changepalProgram() {
 
@@ -33,12 +33,21 @@ async function samepalProgram() {
             let palNameDisplay = document.querySelector(".pal_name");
             palNameDisplay.innerHTML = `${pal.name}`;
 
-            let palPhoto = document.querySelector(".palPhoto");
-            palPhoto.style.height= "200px";
-            palPhoto.style.width= "200px";
-            
+            let palPhoto = document.querySelector(".pal_photo");
+            palPhoto.style.display = "block";
+            palPhoto.style.height = "30%";
+            palPhoto.style.width = "28%";
+            palPhoto.style.border = `7px ${pal.color} solid`;
             palPhoto.src = `${pal.avatar}`;
-            
+            console.log(palPhoto.src);
+
+            let speechBubble = document.querySelector(".speech_bubble");
+            speechBubble.style.backgroundColor = `${pal.color}`;
+            let speechBubbleTip = document.querySelector(".speech_bubble-tip");
+            speechBubbleTip.style.backgroundColor = `${pal.color}`;
+
+            let palButton = document.querySelector("#samemood");
+            palButton.style.backgroundColor = `${pal.color}`;
 
             let palArr = pals.filter(p => p.id === pal.id);
 

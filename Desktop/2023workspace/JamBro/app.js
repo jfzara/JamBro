@@ -18,20 +18,20 @@ function pal(id, name, color, avatar, mood, favorite_sounds, favorite_bpms, favo
 
 
 
-const Darko = new pal(1, 'Darko', 'black', 'images/Darko.jpg', 'dark', ['low frequency sound', 'dark sound',
+const Darko = new pal(1, 'Darko', '#40515380', 'images/Darko.jpg', 'dark', ['low frequency sound', 'dark sound',
     'darker sound', 'low pad sound',
     'moody pad sound', 'soft and dark sound',
     'low frequency percussions', 'menacing pad sounds',
     'sinister synth sound'], [81, 100, 113, 85, 102, 76], ['ballad', 'gothic', 'cold wave'], ['This needs some more mystery', 'Even darker', 'Darker', 'Something sinister', 'I want something which makes me cry...', 'Some creepy short melody, with a pad, or soft sound', 'Some dark sound effect, nothing too showy', 'ooooh, I feel it!']);
 
 
-const Ramos = new pal(2, 'Ramos', 'red', 'images/Ramos.jpg', 'fiesta', ['bright sound', 'horn stab',
+const Ramos = new pal(2, 'Ramos', '#f4ff29', 'images/Ramos.jpg', 'fiesta', ['bright sound', 'horn stab',
     'exotic percussion sound', 'triangle sound',
     'brass sound', 'bright lead', 'vocal stab sound'], [120, 124, 123, 126], ['salsa', 'samba', 'afrobeat', 'ska', 'tropical house'],
     ['Caramba!',
         'Ay, more percussions!', 'Make it more caliente!', 'Si! Muy bueno! A little more!', 'Some spicy hats', 'Some warm trumpets, or flutes, maybe?', 'Needs some tropical sound effect!', 'I want to dance, what about some rythmic chords', 'Some pluck sound, chord or melody!', 'I hear some sexy short melody now!', 'Hey, some cowbell or other high frequency percussion?', 'Ha ha, I like it like that!', 'A little more syncopation, please!', 'Kalimba or thumb piano melody, maybe?', 'Ta-ta-taaa-ta-ta: yes, something like that!', 'I would put some hot snare right there, pal!', 'A clap or a hot rim shot, now?']);
 
-const Irna = new pal(3, 'Irna','purple' ,'images/Irna.jpg', 'romantic/flowers', ['flute sound', 'airy sound', 'airy pad', 'light sound', 'light pad', 'celesta sound', 'soft bell sound', , 'smooth sound', 'smooth strings sound', 'mellow chord', 'smooth guitar strum', 'soft light piano chord', 'very light percussion in the background', 'smooth soft bass', 'sparse light piano notes', 'soft melody', 'soft reverb', 'soft echo', 'soft pad sound', 'soothing sound', 'whispers', 'soft shakers', 'soft rimshot sound', 'soft nature sound'], [72, 81, 100, 103], ['slow ballad', 'slow jam', 'folk', 'indie', 'chamber pop', 'indie pop'], ['I need something really soft and romantic', 'I hear some soft sound repeating in the background', 'Can you add some whispers in the background?', 'I don\'\t know, maybe some sparse notes for melody?', 'I would like an echeoy sound in the background', 'What about a soft pad played in a melody?', 'I\'\m in a romantic mood', 'Let\'\s try some soft couterpoint', 'Maybe some staccato, but with a light or soft sound?', 'Something intimate and delicate', 'An instrument that sounds like a flower?', 'I feel inspired!', 'What about a soft lead sound ?'])
+const Irna = new pal(3, 'Irna','#ff5dff' ,'images/Irna.jpg', 'romantic/flowers', ['flute sound', 'airy sound', 'airy pad', 'light sound', 'light pad', 'celesta sound', 'soft bell sound', , 'smooth sound', 'smooth strings sound', 'mellow chord', 'smooth guitar strum', 'soft light piano chord', 'very light percussion in the background', 'smooth soft bass', 'sparse light piano notes', 'soft melody', 'soft reverb', 'soft echo', 'soft pad sound', 'soothing sound', 'whispers', 'soft shakers', 'soft rimshot sound', 'soft nature sound'], [72, 81, 100, 103], ['slow ballad', 'slow jam', 'folk', 'indie', 'chamber pop', 'indie pop'], ['I need something really soft and romantic', 'I hear some soft sound repeating in the background', 'Can you add some whispers in the background?', 'I don\'\t know, maybe some sparse notes for melody?', 'I would like an echeoy sound in the background', 'What about a soft pad played in a melody?', 'I\'\m in a romantic mood', 'Let\'\s try some soft couterpoint', 'Maybe some staccato, but with a light or soft sound?', 'Something intimate and delicate', 'An instrument that sounds like a flower?', 'I feel inspired!', 'What about a soft lead sound ?'])
 
 
 const pals = [

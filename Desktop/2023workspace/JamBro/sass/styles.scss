@@ -4,97 +4,79 @@
     padding: 0;
 }
 
-.box {
-    border: none;
-
-}
+.box {}
 
 .container {
     height: 100vh;
-    border: 3px rgb(156, 179, 151) solid;
-}
-
-.btn_container {
-    display: flex;
-    justify-content: center;
-    height: 30%;
-}
-
-.btn {
-    position: relative;
-    left: 36%;
-    height: 286px;
-    width: 315px;
-    font-size: 3rem;
-}
-
-.btn:hover {
-    cursor: pointer;
-    background-color: beige;
-}
-
-.collab {
-    display: none;
-    height: 0%;
-    width: 0%;
-}
-
-.pal_container {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    height: 39%;
+    justify-content: center;
 }
 
 
-
-.avatar {
-    position: relative;
-    right: 417px;
-    font-size: 5rem;
-    color: rgb(0, 0, 0);
-    border: 3px red solid;
-}
-
-
-
-.speech_bubble {
-    position: absolute;
-    background: #00aabb;
-    border-radius: 0.4em;
-    width: auto;
-    top: 38px;
-    right: 336px;
-}
-
-.speech_bubble:after {
-    content: '';
+#samemood {
     position: absolute;
     bottom: 0;
-    left: 50%;
-    width: 0;
-    height: 0;
-    border: 20px solid transparent;
-    border-top-color: #00aabb;
-    border-bottom: 0;
-    border-left: 0;
-    margin-left: -10px;
-    margin-bottom: -20px;
+    left: 25%;
+    width: 50%;
+    height: 47%;
+    border-radius: 17%;
+    -webkit-box-shadow: inset 2px 2px 33px 20px rgba(0, 0, 0, 0.57);
+    box-shadow: inset 2px 2px 33px 20px rgba(0, 0, 0, 0.57);
+    border-color: transparent;
+}
+
+
+
+.pal_photo {
+    width: 20%;
+    height: 20%;
+    border: 1px transparent solid;
+    position: absolute;
+    right: 0%;
+    top: 0%;
+    object-fit: cover;
+    object-position: center center;
+    display: none;
 }
 
 .pal_name {
-    position: relative;
-    left: -37%;
+    position: fixed;
+    left: 0%;
+    top: 16%;
+    font-size: 4rem;
+    font-weight: 500;
     text-align: center;
-    font-size: 3rem;
+    width: 0%;
+
 }
-.palPhoto{
-    object-fit: cover;
-    object-position: center center;
-}
-.bubble_container {
-    height: 81%;
-    width: 100%;
-    border: 1px solid;
-}
+
+.btn {}
+
+.speech_bubble{
+    position: relative;
+    font-family: sans-serif;
+    font-size: 18px;
+    line-height: 24px;
+    width: 300px;
+    background: #fff;
+    border-radius: 40px;
+    padding: 24px;
+    text-align: center;
+    color: #000;
+    z-index: 2;
+  }
+  
+  .bubble-bottom-left:before {
+    content: "";
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    border-left: 24px solid #fff;
+    border-right: 12px solid transparent;
+    border-top: 12px solid #fff;
+    border-bottom: 20px solid transparent;
+    left: 32px;
+    bottom: -24px;
+  }
+  
