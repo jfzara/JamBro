@@ -35,15 +35,16 @@ async function samepalProgram() {
 
             let palPhoto = document.querySelector(".pal_photo");
             palPhoto.style.display = "block";
-            palPhoto.style.height = "40%";
-            palPhoto.style.width = "50%";
+            palPhoto.style.height = "238px";
+            palPhoto.style.width = "276px";
             palPhoto.style.border = `1px ${pal.color} solid`;
-            
+
             palPhoto.src = `${pal.avatar}`;
-            
+
 
             let speechBubble = document.querySelector(".speech_bubble");
             speechBubble.style.backgroundColor = `${pal.color}`;
+
             
 
             let palButton = document.querySelector("#samemood");

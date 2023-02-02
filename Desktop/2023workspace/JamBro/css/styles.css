@@ -5,19 +5,25 @@
     padding: 0;
     font-family: sans-serif;
   }
-  body {
-    background: linear-gradient(rgb(198, 179, 179), rgb(192, 255, 214));
+  :root {
+    --my-gradient: linear-gradient(45deg,
+            rgb(198, 179, 179),
+            rgb(192, 255, 214));
   }
-  .container {
+  body {
+    background-image: var(--my-gradient);
+    display: flex;
+    flex-direction: column;
+  }
+  main {
     height: 100vh;
   }
   #samemood {
-    position: absolute;
-    bottom: 0;
-    height: 36%;
-    min-height: 26%;
-    min-width: 270px;
-    border-radius: 21%;
+    position: relative;
+    height: 17rem;
+    left: 32%;
+    width: 36%;
+    border-radius: 22%;
     -webkit-box-shadow: inset 2px 2px 33px 20px rgba(0, 0, 0, 0.57);
     box-shadow: inset 1px 7px 39px 44px rgba(0, 0, 0, 0.6);
     border: none;
@@ -27,21 +33,21 @@
     cursor: pointer;
   }
   .btn_container {
+    position: absolute;
+    bottom: 0rem;
+    width: 100vw;
     display: flex;
+    flex-direction: column;
     justify-content: center;
-  }
-  .btn_buffer {
-    width: 10%;
   }
   .photo_name-container {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    width: 51vw;
   }
   .pal_photo {
-    width: auto;
-    height: 20%;
-    border: 1px transparent solid;
+    border: 3px transparent solid;
     object-fit: cover;
     object-position: center center;
     display: none;
@@ -53,16 +59,32 @@
     width: 50%;
   }
   .speech_bubble {
-    position: absolute;
-    left: 50%;
     font-family: sans-serif;
     line-height: 44px;
     text-align: center;
     color: #000;
     padding-inline: 2px;
+    background-color: rgba(64, 81, 83, 0.5);
+    font-size: 1.5rem;
+    width: 48vw;
   }
-  .speech_bubble-tip {
-    border: 2px solid transparent;
+  .speech_bubble::after {
+    --adequate-color: transparent;
+  }
+  .speech_bubble::after {
+    position: absolute;
+    content: "";
+    left: -63px;
+    left: 50%;
+    z-index: -1;
+    width: 0;
+    height: 0;
+    border-width: 38px;
+    border-style: solid;
+    border-left-color: var(--adequate-color);
+    border-right-color: transparent;
+    border-top-color: transparent;
+    border-bottom-color: transparent;
   }
 }
 
