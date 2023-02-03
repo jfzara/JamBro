@@ -27,16 +27,16 @@
         height: 100vh;
     }
 
-.btn_buffer{
+    .btn_buffer {
 
-    width:10%;
-}
+        width: 10%;
+    }
 
     #samemood {
         position: relative;
-        height: 10rem;
-        left: 32%;
-        width: 10rem;
+        height: 11rem;
+        left: 36%;
+        width: 11rem;
         border-radius: 22%;
         -webkit-box-shadow: inset 2px 2px 33px 20px rgb(0 0 0 / 57%);
         box-shadow: inset 1px 7px 39px 44px rgb(0 0 0 / 60%);
@@ -68,18 +68,19 @@
 
     .pal_photo {
 
-        border: 3px transparent solid;
+        border: 4px transparent solid;
         object-fit: cover;
         object-position: center center;
         display: none;
+        border-radius: 5px;
     }
 
     .pal_name {
 
-        font-size: 3rem;
-        font-weight: 500;
+        font-size: 2rem;
+        font-weight: 700;
         text-align: center;
-        width: 50%;
+        margin-top: 3px;
 
     }
 
@@ -97,6 +98,144 @@
         position: absolute;
         right: 0px;
         width: 48vw;
+        border-radius: 5px;
+        margin-right: 33px;
+
+    }
+
+
+    .speech_bubble::after {
+        --adequate-color: transparent;
+
+    }
+
+    .speech_bubble::after {
+        position: absolute;
+        content: "";
+        left: -63px;
+        left: 50%;
+        z-index: -1;
+        width: 0;
+        height: 0;
+        border-width: 38px;
+        border-style: solid;
+        border-left-color: var(--adequate-color);
+        border-right-color: transparent;
+        border-top-color: transparent;
+        border-bottom-color: transparent;
+
+    }
+
+
+
+}
+
+@media screen and (max-width: 768px) {
+
+
+
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family: sans-serif;
+
+    }
+
+    :root {
+        --my-gradient: linear-gradient(45deg,
+                rgb(198, 179, 179),
+                rgb(192, 255, 214));
+
+    }
+
+    body {
+        background-image: var(--my-gradient);
+        display: flex;
+        flex-direction: column;
+    }
+
+    main {
+        height: 100vh;
+    }
+
+    .btn_buffer {
+
+        width: 10%;
+    }
+
+    #samemood {
+        position: relative;
+        height: 11rem;
+        left: 36%;
+        width: 11rem;
+        border-radius: 22%;
+        -webkit-box-shadow: inset 2px 2px 33px 20px rgb(0 0 0 / 57%);
+        box-shadow: inset 1px 7px 39px 44px rgb(0 0 0 / 60%);
+        border: none;
+        z-index: 2;
+    }
+
+    #samemood:hover {
+        cursor: pointer;
+    }
+
+    .btn_container {
+
+        position: absolute;
+        bottom: 0rem;
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+
+    .photo_name-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 70vw;
+    }
+
+    .pal_photo {
+
+        border: 4px transparent solid;
+        object-fit: cover;
+        object-position: center center;
+        display: none;
+        border-radius: 5px;
+    }
+
+    .pal_name {
+
+        font-size: 2rem;
+        font-weight: 700;
+        text-align: center;
+        margin-top: 3px;
+        position: absolute;
+        top: 2px;
+        padding: 35px;
+
+    }
+
+
+    .speech_bubble {
+
+        height: auto;
+        font-family: sans-serif;
+        line-height: 44px;
+        text-align: center;
+        color: #000;
+        padding-inline: 2px;
+        background-color: rgba(64, 81, 83, 0.5);
+        width: 48vw;
+        border-radius: 5px;
+        margin-right: 33px;
+        position: absolute;
+        top: 17%;
+        background-color: rgba(64, 81, 83, 0.5);
+
 
     }
 

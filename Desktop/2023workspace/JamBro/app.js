@@ -18,7 +18,7 @@ function pal(id, name, color, avatar, mood, favorite_sounds, favorite_bpms, favo
 
 
 
-const Darko = new pal(1, 'Darko', '#40515380', 'images/Darko.jpg', 'dark', ['low frequency sound', 'dark sound',
+const Darko = new pal(1, 'Darko', '#b1bec5', 'images/Darko.jpg', 'dark', ['low frequency sound', 'dark sound',
     'darker sound', 'low pad sound',
     'moody pad sound', 'soft and dark sound',
     'low frequency percussions', 'menacing pad sounds',
