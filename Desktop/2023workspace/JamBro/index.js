@@ -35,8 +35,7 @@ async function samepalProgram() {
 
             let palPhoto = document.querySelector(".pal_photo");
             palPhoto.style.display = "block";
-            palPhoto.style.height = "238px";
-            palPhoto.style.width = "276px";
+            palPhoto.style.width = "70vw";
             palPhoto.style.border = `1px ${pal.color} solid`;
 
             palPhoto.src = `${pal.avatar}`;

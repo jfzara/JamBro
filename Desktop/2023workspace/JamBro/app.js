@@ -25,7 +25,7 @@ const Darko = new pal(1, 'Darko', '#40515380', 'images/Darko.jpg', 'dark', ['low
     'sinister synth sound'], [81, 100, 113, 85, 102, 76], ['ballad', 'gothic', 'cold wave'], ['This needs some more mystery', 'Even darker', 'Darker', 'Something sinister', 'I want something which makes me cry...', 'Some creepy short melody, with a pad, or soft sound', 'Some dark sound effect, nothing too showy', 'ooooh, I feel it!']);
 
 
-const Ramos = new pal(2, 'Ramos', '#f4ff29', 'images/Ramos.jpg', 'fiesta', ['bright sound', 'horn stab',
+const Ramos = new pal(2, 'Ramos', '#f4ff29', 'images/Ramos.jpeg', 'fiesta', ['bright sound', 'horn stab',
     'exotic percussion sound', 'triangle sound',
     'brass sound', 'bright lead', 'vocal stab sound'], [120, 124, 123, 126], ['salsa', 'samba', 'afrobeat', 'ska', 'tropical house'],
     ['Caramba!',
