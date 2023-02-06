@@ -51,6 +51,8 @@
     object-fit: cover;
     object-position: center center;
     display: none;
+    animation: fade-in-photo 0.2s ease-in 5 alternate forwards;
+    animation: size-glitch 0.2s ease-in forwards;
   }
   .pal_name {
     font-size: 2rem;
@@ -60,6 +62,15 @@
     background: whitesmoke;
     width: 54vw;
     display: none;
+    animation: fade-in-photo 0.2s ease-in 5 alternate forwards;
+  }
+  @keyframes fade-in-photo {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
   }
   .speech_bubble {
     height: auto;

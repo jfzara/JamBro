@@ -1,15 +1,15 @@
 @media screen and (max-width: 768px) {
-@font-face {
-    font-family: 'Space Mono', monospace;
-    src: url("fonts/SpaceMono-Regular.ttf");
-}
+    @font-face {
+        font-family: 'Space Mono', monospace;
+        src: url("fonts/SpaceMono-Regular.ttf");
+    }
 
 
     * {
         box-sizing: border-box;
         margin: 0;
         padding: 0;
-        font-family: 'Space Mono', monospace; 
+        font-family: 'Space Mono', monospace;
 
     }
 
@@ -24,7 +24,7 @@
         background-image: var(--my-gradient);
         display: flex;
         flex-direction: column;
-       
+
     }
 
     main {
@@ -63,19 +63,17 @@
     }
 
 
-    .photo_name-container {
-
-       
-    }
+    .photo_name-container {}
 
     .pal_photo {
-
-
         object-fit: cover;
         object-position: center center;
         display: none;
-
+        animation: fade-in-photo 0.2s ease-in 5 alternate forwards;
+        animation: size-glitch 0.2s ease-in forwards;
     }
+
+
 
     .pal_name {
 
@@ -86,14 +84,25 @@
         background: whitesmoke;
         width: 54vw;
         display: none;
+        animation: fade-in-photo 0.2s ease-in 5 alternate forwards;
 
     }
 
+    @keyframes fade-in-photo {
+
+        from {
+            opacity: 0;
+        }
+
+        to {
+            opacity: 1;
+        }
+    }
 
     .speech_bubble {
 
         height: auto;
-        font-family: 'Space Mono', monospace; 
+        font-family: 'Space Mono', monospace;
         line-height: 44px;
         text-align: center;
         color: #000;
