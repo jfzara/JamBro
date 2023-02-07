@@ -24,6 +24,7 @@ async function changepalProgram() {
 };
 
 async function samepalProgram() {
+    
     let selectedpal = [];
     await fetch(url)
         .then((res) => res.json())
@@ -43,7 +44,7 @@ async function samepalProgram() {
 
             let palName = document.querySelector(".pal_name");
             palName.style.display = "block";
-            
+
             let speechBubble = document.querySelector(".speech_bubble");
             speechBubble.style.backgroundColor = `${pal.color}`;
 
@@ -67,9 +68,10 @@ async function samepalProgram() {
 
 
         }
+        
 
         );
-
+        
 
 
 };

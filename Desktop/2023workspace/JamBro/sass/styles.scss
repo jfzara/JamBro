@@ -15,21 +15,40 @@
 
     :root {
         --my-gradient: linear-gradient(45deg,
-                rgb(153, 152, 152),
-                rgb(252, 240, 109));
+                rgb(241 237 237),
+                rgb(236 230 183 / 52%),
+                rgb(171 151 151 / 45%),
+                rgb(176 174 174));
 
     }
 
     body {
-        background-image: var(--my-gradient);
+
         display: flex;
         flex-direction: column;
+
 
     }
 
     main {
         min-height: 100vh;
+        background-image: var(--my-gradient);
+        background-size: 300%;
+        animation: bg-gradient-moving 10s ease-in-out infinite;
     }
+
+    @keyframes bg-gradient-moving {
+        0% {
+            background-position: left;
+        }
+
+
+        100% {
+            background-position: right;
+        }
+    }
+
+
 
     .btn_buffer {
 
@@ -50,7 +69,25 @@
 
     #samemood:hover {
         cursor: pointer;
+        
     }
+    #samemood:active {
+       opacity: 0.9;
+       animation: btn-size-change 0.7s linear; 
+    }
+
+@keyframes btn-size-change {
+    0% {
+        transform: scale(1.0);
+    }
+
+    50% {
+        transform: scale(0.97);
+    }
+  100% {
+        transform: scale(1.0);
+    }
+}
 
     .btn_container {
 
