@@ -40,6 +40,15 @@
     top: 40%;
     font-size: 6vw;
     padding-inline: 4vw;
+    animation: fade-in 5s forwards;
+  }
+  @keyframes fade-in {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
   }
   .btn_buffer {
     width: 10%;
@@ -57,20 +66,23 @@
   }
   #samemood:hover {
     cursor: pointer;
+    animation: btn-size-change 0.4s ease-in-out 3s 3 forwards;
   }
   #samemood:active {
-    opacity: 0.9;
-    animation: btn-size-change 0.7s linear;
+    animation: btn-size-change 0.6s ease-in;
   }
   @keyframes btn-size-change {
     0% {
       transform: scale(1);
+      opacity: 1;
     }
     50% {
-      transform: scale(0.97);
+      transform: scale(0.9);
+      opacity: 0.6;
     }
     100% {
       transform: scale(1);
+      opacity: 1;
     }
   }
   .btn_container {
@@ -87,7 +99,7 @@
     /*object-fit: cover;
     object-position: center center;*/
     display: none;
-    animation: fade-in-photo 0.2s ease-in 5 alternate forwards;
+    animation: fade-in-photo 2s ease-in 5 alternate forwards;
     animation: size-glitch 0.2s ease-in forwards;
   }
   .pal_name {
@@ -142,6 +154,31 @@
     border-top-color: transparent;
     border-bottom-color: transparent;
   }
+  /*let id  = "content";
+
+  let styles = { 
+    '': '',
+    '': '',
+    '': '',
+    '': ''
+  };
+
+  let elementStyle = document.getElementById(id).style;
+  for(let styleName in styles) {
+    elementStyle[styleName] = styles[styleName];
+  }*/
+  /*you can create a function for all this
+
+  <button type="button" onclick="myFunc('id1')"> Click Me! </button>
+  in js
+
+  function myFunc(id){
+      let myDiv = document.getElementById(id);
+      myDiv.style.color = 'red';
+      myDiv.style.backgroundColor = "beige"; 
+      myDiv.style.paddingBottom = "2px";
+      myDiv.style.margin = "3px";
+  }*/
 }
 
 /*# sourceMappingURL=styles.css.map */
