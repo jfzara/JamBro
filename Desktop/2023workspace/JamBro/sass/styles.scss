@@ -34,7 +34,7 @@
         min-height: 100vh;
         background-image: var(--my-gradient);
         background-size: 300%;
-        animation: bg-gradient-moving 10s ease-in-out infinite;
+        animation: bg-gradient-moving 10s ease-in-out alternate infinite;
     }
 
     @keyframes bg-gradient-moving {
@@ -48,6 +48,14 @@
         }
     }
 
+.titre{
+    z-index: 3;
+    position: absolute;
+    top: 40%;
+    font-size: 6vw;
+    padding-inline: 4vw;
+}
+
 
 
     .btn_buffer {
@@ -57,14 +65,15 @@
 
     #samemood {
         position: relative;
-        height: 11rem;
+        height: 8.5rem;
         left: 36%;
-        width: 11rem;
+        width: 8.5rem;
         border-radius: 22%;
         -webkit-box-shadow: inset 2px 2px 33px 20px rgb(0 0 0 / 57%);
         box-shadow: inset 1px 7px 39px 44px rgb(0 0 0 / 60%);
         border: none;
         z-index: 2;
+        
     }
 
     #samemood:hover {
@@ -103,8 +112,10 @@
     .photo_name-container {}
 
     .pal_photo {
-        object-fit: cover;
-        object-position: center center;
+        background-image: url();
+       background-size: contain;
+        /*object-fit: cover;
+        object-position: center center;*/
         display: none;
         animation: fade-in-photo 0.2s ease-in 5 alternate forwards;
         animation: size-glitch 0.2s ease-in forwards;
@@ -140,17 +151,18 @@
 
         height: auto;
         font-family: 'Space Mono', monospace;
-        line-height: 44px;
+        line-height: 35px;
         text-align: center;
         color: #000;
         padding-inline: 2px;
         background-color: rgba(64, 81, 83, 0.5);
-        font-size: 1.5rem;
+        font-size: 1.15rem;
         position: relative;
         right: -54vw;
         width: 46vw;
         border-radius: 5px;
         margin-right: 33px;
+        max-height: 150px;
 
     }
 

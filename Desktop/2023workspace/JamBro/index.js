@@ -24,26 +24,31 @@ async function changepalProgram() {
 };
 
 async function samepalProgram() {
-    
+
     let selectedpal = [];
     await fetch(url)
         .then((res) => res.json())
         .then(function (pals) {
             const randompalIndex = Math.floor(Math.random() * pals.length);
             let pal = pals[randompalIndex];
-            let palNameDisplay = document.querySelector(".pal_name");
-            palNameDisplay.innerHTML = `${pal.name}`;
+            let palName = document.querySelector(".pal_name");
+            palName.innerHTML = `${pal.name}`;
+            palName.style.display = "block";
+
+            let homeTitle = document.querySelector(".titre")
+            homeTitle.innerHTML = "";
+            homeTitle.display = "none";
 
             let palPhoto = document.querySelector(".pal_photo");
             palPhoto.style.display = "block";
             palPhoto.style.width = "54vw";
-            palPhoto.style.height = "39vw";
-           
+            palPhoto.style.height = "39vh";
 
-            palPhoto.src = `${pal.avatar}`;
 
-            let palName = document.querySelector(".pal_name");
-            palName.style.display = "block";
+            palPhoto.style.background = `url(${pal.avatar})`;
+            palPhoto.style.backgroundSize = "cover";
+
+
 
             let speechBubble = document.querySelector(".speech_bubble");
             speechBubble.style.backgroundColor = `${pal.color}`;
@@ -68,10 +73,10 @@ async function samepalProgram() {
 
 
         }
-        
+
 
         );
-        
+
 
 
 };
