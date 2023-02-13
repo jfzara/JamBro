@@ -40,14 +40,20 @@
     top: 26%;
     font-size: 6vw;
     padding-inline: 4vw;
-    animation: fade-in 5s forwards;
+    animation: fade-in 2s ease-out forwards;
   }
   @keyframes fade-in {
     0% {
       opacity: 0;
+      color: transparent;
+      font-size: 0vw;
+      padding-inline: 50vw;
     }
     100% {
       opacity: 1;
+      font-size: 6vw;
+      color: black;
+      padding-inline: 4vw;
     }
   }
   .btn_buffer {

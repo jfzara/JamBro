@@ -35,7 +35,10 @@
         background-image: var(--my-gradient);
         background-size: 300%;
         animation: bg-gradient-moving 10s ease-in-out alternate infinite;
+        
     }
+
+
 
     .Ramos-bg {}
 
@@ -63,16 +66,25 @@
         top: 26%;
         font-size: 6vw;
         padding-inline: 4vw;
-        animation: fade-in 5s forwards;
+        animation: fade-in 2s ease-out forwards;
+        
     }
+
+
 
     @keyframes fade-in {
         0% {
             opacity: 0;
+            color: transparent;
+            font-size: 0vw;
+            padding-inline: 50vw;
         }
 
         100% {
             opacity: 1;
+            font-size: 6vw;
+            color: black;
+            padding-inline: 4vw;
         }
     }
 
@@ -98,7 +110,7 @@
 
     #samemood:hover {
         cursor: pointer;
-       
+
 
     }
 
@@ -135,9 +147,7 @@
     }
 
 
-    .top_container {
-    
-    }
+    .top_container {}
 
     .pal_photo {
         background-image: url();
@@ -146,8 +156,8 @@
         object-position: center center;*/
         display: none;
         animation: fade-in-photo 1s ease-in-out forwards;
-        
-        
+
+
     }
 
 
