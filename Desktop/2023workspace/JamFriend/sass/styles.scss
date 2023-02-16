@@ -1,4 +1,10 @@
+$default-btn-color: rgba(1, 28, 55, 0);
+$hover-btn-color: rgba(1, 28, 55, 1);
+
+
 @media screen and (max-width: 768px) {
+
+
     @font-face {
         font-family: 'Space Mono', monospace;
         src: url("fonts/SpaceMono-Regular.ttf");
@@ -19,6 +25,8 @@
                 rgb(236 230 183 / 52%),
                 rgb(171 151 151 / 45%),
                 rgb(176 174 174));
+
+
 
     }
 
@@ -105,16 +113,18 @@
         box-shadow: inset 1px 7px 39px 44px rgb(0 0 0 / 60%);
         border: none;
         z-index: 2;
-        transform: opacity(0.4);
-
+        transition: all 0.5s ease-in-out ;
+        scale: 0.6;
     }
 
     #samemood:hover {
         cursor: pointer;
-        transition: transform 450ms;
 
         &:hover {
-            transform: opacity(1);
+
+            transform: rotate(180deg);
+            
+
         }
 
 

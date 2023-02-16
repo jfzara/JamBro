@@ -69,14 +69,14 @@
     box-shadow: inset 1px 7px 39px 44px rgba(0, 0, 0, 0.6);
     border: none;
     z-index: 2;
-    transform: opacity(0.4);
+    transition: all 0.5s ease-in-out;
+    scale: 0.6;
   }
   #samemood:hover {
     cursor: pointer;
-    transition: transform 450ms;
   }
   #samemood:hover:hover {
-    transform: opacity(1);
+    transform: rotate(180deg);
   }
   .btn_container {
     position: absolute;
