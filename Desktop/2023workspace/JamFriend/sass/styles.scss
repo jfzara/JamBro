@@ -20,11 +20,7 @@ $hover-btn-color: rgba(1, 28, 55, 1);
     }
 
     :root {
-        --my-gradient: linear-gradient(45deg,
-                rgb(241 237 237),
-                rgb(236 230 183 / 52%),
-                rgb(171 151 151 / 45%),
-                rgb(176 174 174));
+        
 
 
 
@@ -74,7 +70,7 @@ $hover-btn-color: rgba(1, 28, 55, 1);
         top: 26%;
         font-size: 6vw;
         padding-inline: 4vw;
-        animation: fade-in 1.5s cubic-bezier(0.37, 0.84, 0, 0.85) forwards;
+        animation: fade-in 1020ms cubic-bezier(0.37, 0.84, 0, 0.85) forwards;
 
     }
 
@@ -113,7 +109,7 @@ $hover-btn-color: rgba(1, 28, 55, 1);
         box-shadow: inset 1px 7px 39px 44px rgb(0 0 0 / 60%);
         border: none;
         z-index: 2;
-        transition: all 0.5s ease-in-out ;
+        transition: transform 500ms ease-in-out;
         scale: 0.6;
     }
 
@@ -121,10 +117,7 @@ $hover-btn-color: rgba(1, 28, 55, 1);
         cursor: pointer;
 
         &:hover {
-
-            transform: rotate(180deg);
             
-
         }
 
 
@@ -151,7 +144,7 @@ $hover-btn-color: rgba(1, 28, 55, 1);
         /*object-fit: cover;
         object-position: center center;*/
         display: none;
-        animation: fade-in-photo 1s ease-in-out forwards;
+        animation: fade-in-photo 1000ms ease-in-out forwards;
 
 
     }

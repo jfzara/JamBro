@@ -39,6 +39,9 @@ async function samepalProgram() {
             homeTitle.innerHTML = "";
             homeTitle.display = "none";
 
+
+
+
             let palPhoto = document.querySelector(".pal_photo");
             palPhoto.style.display = "block";
             palPhoto.style.width = "54vw";
@@ -57,6 +60,13 @@ async function samepalProgram() {
 
             let palButton = document.querySelector("#samemood");
             palButton.style.backgroundColor = `${pal.color}`;
+
+
+            let root = document.documentElement;
+            root.style.setProperty('--my-gradient', `45deg, rgb(241 237 237), rgb(236 230 183 / 52%), rgb(171 151 151 / 45%), ${pal.color}`);
+
+            let mainContainer = document.querySelector(".main");
+            mainContainer.style.backgroundColor = ;
 
             let palArr = pals.filter(p => p.id === pal.id);
 
