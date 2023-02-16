@@ -40,7 +40,7 @@
     top: 26%;
     font-size: 6vw;
     padding-inline: 4vw;
-    animation: fade-in 2s ease-out forwards;
+    animation: fade-in 1.5s cubic-bezier(0.37, 0.84, 0, 0.85) forwards;
   }
   @keyframes fade-in {
     0% {
@@ -61,7 +61,6 @@
   }
   #samemood {
     position: relative;
-    position: relative;
     height: 33.3vw;
     left: 33.3vw;
     width: 33.3vw;
@@ -70,26 +69,14 @@
     box-shadow: inset 1px 7px 39px 44px rgba(0, 0, 0, 0.6);
     border: none;
     z-index: 2;
+    transform: opacity(0.4);
   }
   #samemood:hover {
     cursor: pointer;
+    transition: transform 450ms;
   }
-  #samemood:active {
-    animation: btn-size-change 0.6s ease-in;
-  }
-  @keyframes btn-size-change {
-    0% {
-      transform: scale(1);
-      opacity: 1;
-    }
-    50% {
-      transform: scale(0.9);
-      opacity: 0.6;
-    }
-    100% {
-      transform: scale(1);
-      opacity: 1;
-    }
+  #samemood:hover:hover {
+    transform: opacity(1);
   }
   .btn_container {
     position: absolute;
