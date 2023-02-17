@@ -63,10 +63,11 @@ async function samepalProgram() {
 
 
             let root = document.documentElement;
-            root.style.setProperty('--my-gradient', `45deg, rgb(241 237 237), rgb(236 230 183 / 52%), rgb(171 151 151 / 45%), ${pal.color}`);
+            root.style.setProperty('--my-gradient', `${pal.bgcolor}`);
 
-            let mainContainer = document.querySelector(".main");
-            mainContainer.style.backgroundColor = "--my-gradient";
+            
+            
+            
 
             let palArr = pals.filter(p => p.id === pal.id);
 
