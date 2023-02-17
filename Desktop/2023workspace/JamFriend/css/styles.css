@@ -62,11 +62,12 @@
     box-shadow: inset 1px 7px 39px 44px rgba(0, 0, 0, 0.6);
     border: none;
     z-index: 2;
-    transition: transform 500ms ease-in-out;
+    transition: transform 250ms ease-in-out;
     scale: 0.6;
   }
   #samemood:hover {
     cursor: pointer;
+    transform: scale(1.2);
   }
   .btn_container {
     position: absolute;

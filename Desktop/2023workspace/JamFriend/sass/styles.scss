@@ -109,18 +109,13 @@ $hover-btn-color: rgba(1, 28, 55, 1);
         box-shadow: inset 1px 7px 39px 44px rgb(0 0 0 / 60%);
         border: none;
         z-index: 2;
-        transition: transform 500ms ease-in-out;
-        scale: 0.6;
+        transition: transform 250ms ease-in-out;
+        scale:0.6;
     }
 
     #samemood:hover {
         cursor: pointer;
-
-        &:hover {
-            
-        }
-
-
+        transform: scale(1.2);
     }
 
 
