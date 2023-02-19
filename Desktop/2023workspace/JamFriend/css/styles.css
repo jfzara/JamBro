@@ -10,7 +10,7 @@
     font-family: "Space Mono", monospace;
   }
   :root {
-    --my-gradient: linear-gradient(0.25turn, #3f87a6, #ebf8e1, #f69d3c);
+    --btn-landing-color: inset 0px 6px 56px 44px rgb(36 114 99 / 56%);
   }
   body {
     display: flex;
@@ -19,8 +19,8 @@
   main {
     min-height: 100vh;
     background: var(--my-gradient);
-    background-size: 300%;
-    animation: bg-gradient-moving 4s ease-in-out alternate infinite;
+    background-size: 360%;
+    animation: bg-gradient-moving 5000ms ease-in-out alternate infinite;
   }
   @keyframes bg-gradient-moving {
     0% {
@@ -62,7 +62,7 @@
     width: 33.3vw;
     border-radius: 22%;
     -webkit-box-shadow: inset 2px 2px 33px 20px rgba(0, 0, 0, 0.57);
-    box-shadow: inset 1px 7px 39px 44px rgba(0, 0, 0, 0.6);
+    box-shadow: inset 0px 7px 33px 44px rgba(0, 0, 0, 0.6);
     border: none;
     z-index: 2;
     transition: transform 250ms ease-in-out;
@@ -86,7 +86,7 @@
     /*object-fit: cover;
     object-position: center center;*/
     display: none;
-    animation: fade-in-photo 1000ms ease-in-out forwards;
+    animation: fade-in 1500ms ease-in-out forwards;
   }
   .pal_name {
     font-size: 2rem;
@@ -96,13 +96,16 @@
     background: whitesmoke;
     width: 54vw;
     display: none;
-    animation: fade-in-photo 0.2s ease-in 5 alternate forwards;
+    animation: fade-in 260ms ease-in 5 alternate forwards;
   }
-  @keyframes fade-in-photo {
-    from {
+  @keyframes fade-in {
+    0% {
       opacity: 0;
     }
-    to {
+    50% {
+      opacity: 0.5;
+    }
+    100% {
       opacity: 1;
     }
   }
@@ -113,7 +116,7 @@
     text-align: center;
     color: #000;
     padding-inline: 2px;
-    background-color: rgba(64, 81, 83, 0.5);
+    background-color: white;
     font-size: 1.15rem;
     position: relative;
     right: -54vw;

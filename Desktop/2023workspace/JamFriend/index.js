@@ -51,23 +51,16 @@ async function samepalProgram() {
             palPhoto.style.background = `url(${pal.avatar})`;
             palPhoto.style.backgroundSize = "cover";
 
-
+let btn = document.getElementById("samemood");
+btn.style.backgroundColor = `${pal.color}`;
 
             let speechBubble = document.querySelector(".speech_bubble");
-            speechBubble.style.backgroundColor = `${pal.color}`;
+            speechBubble.style.backgroundColor = "whitesmoke";
 
-
-
-            let palButton = document.querySelector("#samemood");
-            palButton.style.backgroundColor = `${pal.color}`;
 
 
             let root = document.documentElement;
             root.style.setProperty('--my-gradient', `${pal.bgcolor}`);
-
-            
-            
-            
 
             let palArr = pals.filter(p => p.id === pal.id);
 
@@ -79,7 +72,7 @@ async function samepalProgram() {
                         let phrase = selectedpal.phrases[randomPhraseIndex]
                         speechBubble.innerHTML = `${phrase}`;
 
-                    }, 5000);
+                    }, 8000);
             }
 
 
