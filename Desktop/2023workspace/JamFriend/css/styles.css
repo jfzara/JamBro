@@ -1,13 +1,13 @@
 @media screen and (max-width: 768px) {
   @font-face {
-    font-family: "Space Mono", monospace;
-    src: url("fonts/SpaceMono-Regular.ttf");
+    font-family: "Rubik", sans-serif;
+    src: url("fonts2/Rubik-Regular.ttf");
   }
   * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: "Space Mono", monospace;
+    font-family: "Rubik", sans-serif;
   }
   :root {
     --btn-landing-color: inset 0px 6px 56px 44px rgb(36 114 99 / 56%);
@@ -62,11 +62,10 @@
     width: 33.3vw;
     border-radius: 22%;
     -webkit-box-shadow: inset 2px 2px 33px 20px rgba(0, 0, 0, 0.57);
-    box-shadow: inset 0px 7px 33px 44px rgba(0, 0, 0, 0.6);
-    border: none;
     z-index: 2;
     transition: transform 250ms ease-in-out;
     scale: 0.6;
+    border: 2px grey solid;
   }
   #samemood:hover {
     cursor: pointer;
@@ -111,7 +110,7 @@
   }
   .speech_bubble {
     height: auto;
-    font-family: "Space Mono", monospace;
+    font-family: "Rubik", sans-serif;
     line-height: 35px;
     text-align: center;
     color: #000;
