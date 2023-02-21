@@ -67,8 +67,8 @@
          top: 26%;
          font-size: 6vw;
          padding-inline: 4vw;
-         animation: fade-in 1020ms cubic-bezier(0.37, 0.84, 0, 0.85) forwards;
-
+         animation: fadeIn-and-grow 2500ms ease-in forwards;
+         scale: 0;
      }
 
 
@@ -76,19 +76,40 @@
      @keyframes fade-in {
          0% {
              opacity: 0;
-             color: transparent;
-             font-size: 0vw;
-             padding-inline: 50vw;
+
          }
 
          100% {
              opacity: 1;
-             font-size: 6vw;
-             color: black;
-             padding-inline: 4vw;
+
          }
      }
 
+     @keyframes fadeIn-and-grow {
+         0% {
+             opacity: 0;
+             scale: 0;
+
+         }
+
+         20% {
+             opacity: 0.2;
+             scale: 0.2;
+
+         }
+
+         60% {
+             opacity: 0.6;
+             scale: 0.6;
+
+         }
+
+         100% {
+             opacity: 1;
+             scale: 1;
+
+         }
+     }
 
      .btn_buffer {
 
@@ -103,7 +124,7 @@
          width: 33.3vw;
          border-radius: 22%;
          -webkit-box-shadow: inset 2px 2px 33px 20px rgb(0 0 0 / 57%);
-         
+
          z-index: 2;
          transition: transform 250ms ease-in-out;
          scale: 0.6;
@@ -131,7 +152,7 @@
 
      .top_container {}
 
-     .pal_photo {
+     .friend_photo {
          background-image: url();
          background-size: contain;
          /*object-fit: cover;
@@ -144,7 +165,7 @@
 
 
 
-     .pal_name {
+     .friend_name {
 
          font-size: 2rem;
          font-weight: 700;

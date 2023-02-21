@@ -1,5 +1,5 @@
 
-const url = "http://localhost:3000/api/pals";
+const url = "http://localhost:3000/api/friends";
 const queryString = window.location.search;
 
 
@@ -8,14 +8,14 @@ const productId = urlParams.get('id');
 
 
 
-async function changepalProgram() {
+async function changefriendProgram() {
 
     await fetch(url)
         .then((res) => res.json())
-        .then(function (pals) {
-            const random = Math.floor(Math.random() * pals.length);
-            let pal = pals[random];
-            console.log(pal);
+        .then(function (friends) {
+            const random = Math.floor(Math.random() * friends.length);
+            let friend = friends[random];
+            console.log(friend);
 
         });
 
@@ -23,17 +23,17 @@ async function changepalProgram() {
 
 };
 
-async function samepalProgram() {
+async function samefriendProgram() {
 
-    let selectedpal = [];
+    let selectedfriend = [];
     await fetch(url)
         .then((res) => res.json())
-        .then(function (pals) {
-            const randompalIndex = Math.floor(Math.random() * pals.length);
-            let pal = pals[randompalIndex];
-            let palName = document.querySelector(".pal_name");
-            palName.innerHTML = `${pal.name}`;
-            palName.style.display = "block";
+        .then(function (friends) {
+            const randomfriendIndex = Math.floor(Math.random() * friends.length);
+            let friend = friends[randomfriendIndex];
+            let friendName = document.querySelector(".friend_name");
+            friendName.innerHTML = `${friend.name}`;
+            friendName.style.display = "block";
 
             let homeTitle = document.querySelector(".titre")
             homeTitle.innerHTML = "";
@@ -42,17 +42,17 @@ async function samepalProgram() {
 
 
 
-            let palPhoto = document.querySelector(".pal_photo");
-            palPhoto.style.display = "block";
-            palPhoto.style.width = "54vw";
-            palPhoto.style.height = "39vh";
+            let friendPhoto = document.querySelector(".friend_photo");
+            friendPhoto.style.display = "block";
+            friendPhoto.style.width = "54vw";
+            friendPhoto.style.height = "39vh";
 
 
-            palPhoto.style.background = `url(${pal.avatar})`;
-            palPhoto.style.backgroundSize = "cover";
+            friendPhoto.style.background = `url(${friend.avatar})`;
+            friendPhoto.style.backgroundSize = "cover";
 
 let btn = document.getElementById("samemood");
-btn.style.backgroundColor = `${pal.color}`;
+btn.style.backgroundColor = `${friend.color}`;
 
             let speechBubble = document.querySelector(".speech_bubble");
             speechBubble.style.backgroundColor = "whitesmoke";
@@ -60,19 +60,19 @@ btn.style.backgroundColor = `${pal.color}`;
 
 
             let root = document.documentElement;
-            root.style.setProperty('--my-gradient', `${pal.bgcolor}`);
+            root.style.setProperty('--my-gradient', `${friend.bgcolor}`);
 
-            let palArr = pals.filter(p => p.id === pal.id);
+            let friendArr = friends.filter(p => p.id === friend.id);
 
-            for (let p = 0; p <= palArr.length; p++) {
+            for (let p = 0; p <= friendArr.length; p++) {
                 setInterval(
                     function () {
-                        const randomPhraseIndex = Math.floor(Math.random() * palArr[0].phrases.length);
-                        let selectedpal = palArr[0]
-                        let phrase = selectedpal.phrases[randomPhraseIndex]
+                        const randomPhraseIndex = Math.floor(Math.random() * friendArr[0].phrases.length);
+                        let selectedfriend = friendArr[0]
+                        let phrase = selectedfriend.phrases[randomPhraseIndex]
                         speechBubble.innerHTML = `${phrase}`;
 
-                    }, 8000);
+                    }, 12000);
             }
 
 
@@ -86,6 +86,6 @@ btn.style.backgroundColor = `${pal.color}`;
 };
 
 let sameMood = document.getElementById("samemood");
-sameMood.addEventListener("click", samepalProgram);
+sameMood.addEventListener("click", samefriendProgram);
 
 
