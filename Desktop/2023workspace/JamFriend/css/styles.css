@@ -15,12 +15,13 @@
   body {
     display: flex;
     flex-direction: column;
+    background-color: #000;
   }
   main {
     min-height: 100vh;
     background: var(--my-gradient);
     background-size: 360%;
-    animation: bg-gradient-moving 5000ms ease-in-out alternate infinite;
+    animation: bg-gradient-moving 14000ms ease-in-out alternate infinite;
   }
   @keyframes bg-gradient-moving {
     0% {
@@ -34,7 +35,8 @@
     z-index: 3;
     position: absolute;
     top: 26%;
-    font-size: 6vw;
+    font-size: 5.5vw;
+    color: beige;
     padding-inline: 4vw;
     animation: fadeIn-and-grow 2500ms ease-in forwards;
     scale: 0;
@@ -65,13 +67,9 @@
       scale: 1;
     }
   }
-  .btn_buffer {
-    width: 10%;
-  }
   #samemood {
     position: relative;
     height: 33.3vw;
-    left: 33.3vw;
     width: 33.3vw;
     border-radius: 22%;
     -webkit-box-shadow: inset 2px 2px 33px 20px rgba(0, 0, 0, 0.57);
@@ -82,15 +80,14 @@
   }
   #samemood:hover {
     cursor: pointer;
-    transform: scale(1.2);
+    transform: scale(1.1);
   }
   .btn_container {
     position: absolute;
     bottom: 0rem;
     width: 100vw;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    display: grid;
+    place-content: center;
   }
   .friend_photo {
     background-image: url();

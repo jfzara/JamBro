@@ -35,9 +35,17 @@ const Ramos = new friend(2, 'Ramos', 'rgb(246 86 56 / 92%)','linear-gradient(0.7
 
 const Irna = new friend(3, 'Irna','rgb(75 255 175 / 82%)' ,'linear-gradient(0.25turn, #f7deca, #fdf6b5, #d9d2f7)', 'inset 0px 3px 27px 23px rgb(0 0 0 / 53%)','images/Irna.jpg', 'romantic/flowers', ['flute sound', 'airy sound', 'airy pad', 'light sound', 'light pad', 'celesta sound', 'soft bell sound', , 'smooth sound', 'smooth strings sound', 'mellow chord', 'smooth guitar strum', 'soft light piano chord', 'very light percussion in the background', 'smooth soft bass', 'sparse light piano notes', 'soft melody', 'soft reverb', 'soft echo', 'soft pad sound', 'soothing sound', 'whispers', 'soft shakers', 'soft rimshot sound', 'soft nature sound'], [72, 81, 100, 103], ['slow ballad', 'slow jam', 'folk', 'indie', 'chamber pop', 'indie pop'], ['I need something really soft and romantic', 'I hear some soft sound repeating in the background', 'Can you add some whispers in the background?', 'I don\'\t know, maybe some sparse notes for melody?', 'I would like an echeoy sound in the background', 'What about a soft pad played in a melody?', 'I\'\m in a romantic mood', 'Let\'\s try some soft couterpoint', 'Maybe some staccato, but with a light or soft sound?', 'Something intimate and delicate', 'An instrument that sounds like a flower?', 'I feel inspired!', 'What about a soft lead sound ?'])
 
+const YBN_Pitface = new friend(4, 'YBN_Pitface', 'rgb(222 211 237)','linear-gradient(0.1turn, #fff, #bcbcbc, #333)' , 'inset 2px 2px 33px 28px rgb(0 0 0 / 57%)','images/Darko.jpg', 'rap', ['drums', 'sample',
+    'percussion loop', 'low kickdrum',
+    'heavy drums', 'synths',
+    'synth chords', 'sampled vocals',
+    'sampled instruments'], [80, 100, 130, 125, 120, 90], ['banger', 'trap', 'drill'], ['That's dope', 'Even darker', 'Darker', 'Something sinister', 'I want something which makes me cry...', 'Some creepy short melody, with a pad, or soft sound', 'Some dark sound effect, nothing too showy', 'ooooh, I feel it!']);
+
+
+c
 
 const friends = [
-    Darko, Ramos, Irna
+    Darko, Ramos, Irna, 
 ];
 
 
