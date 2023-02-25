@@ -51,8 +51,8 @@ async function samefriendProgram() {
             friendPhoto.style.background = `url(${friend.avatar})`;
             friendPhoto.style.backgroundSize = "cover";
 
-let btn = document.getElementById("samemood");
-btn.style.backgroundColor = `${friend.color}`;
+            let btn = document.getElementById("samemood");
+            btn.style.backgroundColor = `${friend.color}`;
 
             let speechBubble = document.querySelector(".speech_bubble");
             speechBubble.style.backgroundColor = "whitesmoke";
@@ -86,6 +86,7 @@ btn.style.backgroundColor = `${friend.color}`;
 };
 
 let sameMood = document.getElementById("samemood");
-sameMood.addEventListener("click", samefriendProgram);
-
+sameMood.addEventListener("click", function () {
+    setTimeout(samefriendProgram, 1001)
+});
 

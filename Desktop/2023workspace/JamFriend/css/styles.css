@@ -40,6 +40,7 @@
     padding-inline: 4vw;
     animation: fadeIn-and-grow 2500ms ease-in forwards;
     scale: 0;
+    text-shadow: 1px 1px 1px #8dffff, 3px 3px 1px rgb(50, 50, 72);
   }
   @keyframes fade-in {
     0% {
@@ -70,17 +71,18 @@
   #samemood {
     position: relative;
     height: 33.3vw;
+    background-color: #35ffff;
     width: 33.3vw;
-    border-radius: 22%;
+    border-radius: 50%;
     -webkit-box-shadow: inset 2px 2px 33px 20px rgba(0, 0, 0, 0.57);
     z-index: 2;
-    transition: transform 250ms ease-in-out;
-    scale: 0.6;
+    transition: background-color 1000ms ease-out;
+    scale: 0.5;
     border: 2px grey solid;
   }
   #samemood:hover {
     cursor: pointer;
-    transform: scale(1.1);
+    background-color: #ffffff;
   }
   .btn_container {
     position: absolute;
