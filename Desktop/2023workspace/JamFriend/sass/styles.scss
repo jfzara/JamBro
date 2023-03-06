@@ -31,25 +31,38 @@
      }
 
 .bio {
-    border:1px solid black;
-    width: 22%;
-    height: 5%;
+    border:2px solid rgb(6, 69, 69);
+  
 }
 .friend {
     border:1px solid black;
-    width: 22%;
-    height: 5%;
+   
 }
 .bio_container{
     border: 1px rgb(44, 33, 115) solid;
-    width: 100vw;
-    height: 100vh;
-   
+    z-index: -1;
+    width: 85vw;
+    height: 47vh;
+    border: 1px red solid;
+    position: absolute;
+    top: 0%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr) ;
+    grid-template-rows: repeat(2, 1fr) ;
+   left: 2em;
+   padding-top: 18%;
 }
 .friend_container{
     z-index: 1;
-    width: 100vw;
-    height: 100vh;
+    width: 85vw;
+    height: 47vh;
     border: 1px red solid;
+    position: absolute;
+    top: 0%;
+    left: 2em;
+    padding-top: 18%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr) ;
+    grid-template-rows: repeat(2, 1fr) ;
 }
  }
