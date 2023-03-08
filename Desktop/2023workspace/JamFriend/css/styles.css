@@ -9,39 +9,6 @@
     padding: 0;
     font-family: "Rubik", sans-serif;
   }
-  .bio {
-    border: 2px solid rgb(6, 69, 69);
-  }
-  .friend {
-    border: 1px solid black;
-  }
-  .bio_container {
-    border: 1px rgb(44, 33, 115) solid;
-    z-index: -1;
-    width: 85vw;
-    height: 47vh;
-    border: 1px red solid;
-    position: absolute;
-    top: 0%;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    left: 2em;
-    padding-top: 18%;
-  }
-  .friend_container {
-    z-index: 1;
-    width: 85vw;
-    height: 47vh;
-    border: 1px red solid;
-    position: absolute;
-    top: 0%;
-    left: 2em;
-    padding-top: 18%;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-  }
 }
 
 /*# sourceMappingURL=styles.css.map */

@@ -9,6 +9,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rubik&family=Space+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+
+
     <script src="https://kit.fontawesome.com/82a065eaab.js" crossorigin="anonymous"></script>
 
     <title>JamFriend</title>
@@ -17,30 +20,31 @@
 
 <body>
     <main class="container">
-
-        <ul class="friend_container">
-
-            <li class="friend box"></li>
-            <li class="friend box"></li>
-            <li class="friend box"></li>
-            <li class="friend box"></li>
-
-        </ul>
-
-        <ul class="bio_container">
-
-            <li class="bio box"></li>
-            <li class="bio box"></li>
-            <li class="bio box"></li>
-            <li class="bio box"></li>
-
-        </ul>
+        <div class="swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide">Slide 1</div>
+              <div class="swiper-slide">Slide 2</div>
+              <div class="swiper-slide">Slide 3</div>
+              ...
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+          
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+          
+            <!-- If we need scrollbar -->
+            <div class="swiper-scrollbar"></div>
+          </div>
 
 
     </main>
     <script src="https://code.jquery.com/jquery-3.6.3.min.js"
         integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
     <script src="index.js" defer type="text/javascript"></script>
-</body>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 
 </html>
