@@ -33,14 +33,17 @@
      .swiper {
         width: 600px;
         height: 300px;
+        ;
       }
 
 .swiper-container {
     height: 500px;
+    background-image: url("images/Darko.jpg");
 }
 .swiper-slide{
     display: flex;
-    background: gray;
+    background-size: cover;
+   
     justify-content: center;
     align-items: center;
 }
