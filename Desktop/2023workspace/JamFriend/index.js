@@ -1,19 +1,25 @@
 
-const url = "http://localhost:3000/api/friends";
-const queryString = window.location.search;
-
-
-const urlParams = new URLSearchParams(queryString);
-const productId = urlParams.get('id');
-
-
-
-function testing () {
-
-    console.log("hello");
-
-};
-
+const swiper = new Swiper('.swiper', {
+    // Optional parameters
+    direction: 'vertical',
+    loop: true,
+  
+    // If we need pagination
+    pagination: {
+      el: '.swiper-pagination',
+    },
+  
+    // Navigation arrows
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  
+    // And if we need scrollbar
+    scrollbar: {
+      el: '.swiper-scrollbar',
+    },
+  });
 
 
 
