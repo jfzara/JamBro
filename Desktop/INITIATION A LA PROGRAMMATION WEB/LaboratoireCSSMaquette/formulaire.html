@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body>
+
+    <main style="width: 500px; margin-left: auto; margin-right: auto;">
+
+
+        <h1 height="100">Commandez votre ramen</h1>
+        <img src="Images/Bol_de_soupe_ramen.jpg" alt="Photo d'un bol de soupe ramen"
+            style="width:100%; height:200px; object-fit: cover;">
+        <h2>Choix du ramen</h2>
+        <form action="choix_du_user" method="GET">
+            <fieldset>
+                <legend style="margin-bottom: 20px;">Bouillon</legend>
+                <table cellspacing="10">
+                    <tr style="margin-bottom: 18px;">Intensité du goût</tr><br>
+                    <tr>
+                        <td>
+                            <input type="radio" id="faible" name="intensite" value="faible" />
+                            <label for="faible">Faible</label>
+                        <td>
+                        <td>
+                            <input type="radio" id="moyenne" name="intensite" value="moyenne" checked />
+                            <label for="moyenne">Moyenne</label>
+                        </td>
+                        <td>
+                            <input type="radio" id="forte" name="intensite" value="forte" />
+                            <label for="forte">Forte</label>
+                        </td>
+                    </tr>
+                </table><br>
+                <table cellspacing="10">
+                    <tr>Richesse (huile et gras):</tr>
+
+                    <tr>
+
+                        <td>
+                            <input type="radio" id="aucune" name="richesse" value="aucune" />
+                            <label for="aucune">Aucune</label>
+                        </td>
+                        <td>
+                            <input type="radio" id="legere" name="richesse" value="legere" />
+                            <label for="legere">Légère</label>
+                        </td>
+                        <td>
+                            <input type="radio" id="moyenne" name="richesse" value="moyenne" checked />
+                            <label for="moyenne">Moyenne</label>
+                        </td>
+                        <td>
+                            <input type="radio" id="forte" name="richesse" value="forte" />
+                            <label for="forte">Forte</label>
+                        </td>
+                        <td>
+                            <input type="radio" id="ultra" name="richesse" value="ultra" />
+                            <label for="ultra">Ultra</label>
+                        </td>
+                    </tr>
+                </table><br>
+            </fieldset>
+            <fieldset>
+                <legend >Nouilles</legend>
+                    
+                <form action="choix_nouilles" method="GET">
+                    <p>Texture:</p>
+                    <select name="texture" size="5" ><br>
+                        <option>Extra ferme</option>
+                        <option>Ferme</option>
+                        <option selected> Moyenne</option>
+                        <option>Molle</option>
+                        <option>Extra molle</option>
+                    </select>
+                </form>
+
+
+            </fieldset>
+            <fieldset>
+                <legend >Contenu</legend><br>
+                <table  >
+                    <tr  >
+                        <label for="ail" name="ail" >Ail:</label><br>
+                            <select name="ail" id="ail" style="margin-top: 18px;">
+                                <option value="aucun">Aucun</option>
+                                 <option value="un_peu">Un peu</option>
+                                <option value="normal">Normal</option>
+                                <option value="beaucoup">Beaucoup</option>
+                                 <option value="enormement">Enormément</option>
+                            </select>
+                    </tr>
+                </table><br>
+                <table >
+                    <tr>
+                        <label for="oignon_vert" name="oignon_vert">Oignon vert:</label><br>
+
+                            <select name="oignon_vert" id="oignon_vert" style="margin-top: 18px;">
+                                <option value="aucun">Aucun</option>
+                                <option value="oignon_partiel">Oignon vert partiel</option>
+                                <option value="oignon_complet">Oignon vert complet</option>
+                            </select>
+                    </tr>
+                </table>
+                
+                    <form action="choix_viande">
+                        <p>Viande:</p>
+                        <input type="checkbox" id="porc" name="viande" value="porc">
+                        <label for="viande">Porc </label>
+                        <input type="checkbox" id="boeuf" name="viande" value="boeuf">
+                        <label for="viande">Boeuf </label>
+                        <input type="checkbox" id="poulet" name="viande" value="poulet">
+                        <label for="viande">Poulet </label>
+                    </form>
+            </fieldset>
+            <fieldset>
+                <legend>Garniture</legend>
+                <form action="choix_nouilles" method="GET">
+                    <p>Garniture à ajouter:</p>
+                    <select name="garniture" size="5" style="margin-top: 18px;">
+                        <option>Tamago (Oeuf)</option>
+                        <option>Menma (Pousse de bambou)</option>
+                        <option selected> Moyashi (Germe de soja)</option>
+                        <option>Algues</option>
+                        <option>Maïs</option>
+                    </select>
+                </form>
+            </fieldset>
+        </form>
+        <h2>Information sur la commande</h2>
+        
+            <fieldset>
+            <legend style="margin-bottom: 20px;">Identification</legend>
+            <form action="identification_user">
+                <label for="prenom" >Prénom</label><br>
+                <input type="text" id="prenom" name="prenom" placeholder="Prénom" style="margin-top:18px;"><br><br>
+                <label for="nom">Nom</label><br>
+                <input type="text" id="nom" name="nom" placeholder="Nom" style="margin-top:18px;"><br>
+              </form> 
+            </fieldset>
+            <h2>Envoyer la commande</h2>
+            <input type="submit" value="Soumettre la commande" >
+
+        </form>
+        </div>
+    </main>
+
+    <footer></footer>
+</body>
+
+</html>
